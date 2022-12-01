@@ -16,14 +16,7 @@
 .data{
     height: 200px;
     width: 200px;
-}
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-    /*DELETE INPUT NUMBER ARROWS*/
-}
+  }
 h1{
     text-shadow: 5px 5px 10px #f5ff37;
     color: #fdffd8;
@@ -51,3 +44,10 @@ footer{
   background-color: #6ab08c;
   color: var(--white);
 }.btn-g2 button:hover{background-color: #75c39b;}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    /*DELETE INPUT NUMBER ARROWS*/
+}
