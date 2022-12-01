@@ -70,13 +70,14 @@ class Vector{
         let x = c[0];
         let y = c[1];
         this._direction = v.direction;
-        this._module = 1;
+        this._module = new Decimal(1);
         this._componentx = x.dividedBy(v.module).toDecimalPlaces(2);
         this._componenty = y.dividedBy(v.module).toDecimalPlaces(2);
     }
     escalarVector(v, esc){        
         this._direction = v.direction;
-        this._module = v.module.times(esc);
+        let mod = v.module;
+        this._module = mod.times(esc)
         this.componentsCalc();
     }
     addition(v, b){

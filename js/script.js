@@ -95,7 +95,7 @@ function displayVectorsBox() {
     vectors.forEach(i => {
         let c = i.components;
         $(".vectors ul").append( //add list from vectors list
-            "<li class='list-group-item'>\
+            "<li class='list-group-item list-vector-li'>\
             Vector "+i.name+": ("+c[0]+";"+c[1]+")</li>"
         );
     });
@@ -214,11 +214,17 @@ function saveVector() {
         }
     });
 }
+function getNumberID(params) {
+    let id = params.attr("id");
+    let ind = id.lastIndexOf("-");
+    let numstr = id.slice(ind+1, id.length)
+    let num = parseInt(numstr);
+    return num;
+}
 //---------------------------------------------------------------
 //RADIO UNIT CALC------------------------------------------------
 function unitFun(radio) {
-    let id = radio.attr("id");
-    let num = parseInt(id.charAt(id.length-1));
+    let num = getNumberID(radio);
     let v = vectors[num-1];
     vector.unitVector(v);
     let c = vector.components;
@@ -230,8 +236,7 @@ function unitFun(radio) {
 //---------------------------------------------------------------
 //RADIO ESCALAR CALC---------------------------------------------
 function escalarFun(radio) {
-    let id = radio.attr("id");
-    let num = parseInt(id.charAt(id.length-1));
+    let num = getNumberID(radio);
     let v = vectors[num-1];
     let esc = parseFloat($("#escalar-input").val());
     if (Number.isNaN(esc)) {
@@ -257,7 +262,7 @@ function escalarInputFunKey() {
 //ADDITION AND SUSTRACTION---------------------------------------
 function additionFun(check) {
     let id = check.attr("id");
-    let num = parseInt(id.charAt(id.length-1));
+    let num = getNumberID(check);
     let b = document.getElementById(id).checked;
     vector.addition(vectors[num-1], b);
     let c = vector.components;

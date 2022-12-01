@@ -7,7 +7,6 @@
     <title>Proyecto de F&iacute;sica | Grupo 5</title>
     <!--CSS-->
     <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/root.css">
     <link rel="stylesheet" href="./css/style.css">
     <!--SCRIPTS-->
     <script src="./js/decimal.min.js"></script>
@@ -17,46 +16,46 @@
 </head>
 <body>
     <!--HEADER-->
-    <header class="text-center">
-        <h1>CALCULADORA DE VECTORES</h1>
+    <header>
+        <h1 class="text-center">CALCULADORA DE VECTORES</h1>
     </header>
     <!--SECTION-->
     <section>
-    <div class="container">
+    <div class="container my-cont">
     <div class="row">
         <!--MY VECTORS-->
-        <div class="col-sm-12 col-md-6 col-lg-3 bg-warning rounded">
-            <h3 class="text-center">Mis vectores</h3>
+        <div class="col-sm-12 col-md-4 col-lg-3 rounded my-vectors">
+            <h3 class="text-center text-light">Mis vectores</h3>
             <!--VECTORS SCREEN-->
-            <div class="d-block vectors box">
+            <div class="d-block vectors box box-cont">
                 <ul class="list-group"></ul>
             </div>
-            <button class="btn btn-danger d-block m-auto">Editar vectores</button>
+            <button class="btn btn-danger d-block m-auto my-2">Editar vectores</button>
         </div>
         <!--OPTIONS-->
-        <div class="col-sm-12 col-md-6 col-lg-9 bg-info rounded">
-            <h3 class="text-center">Opciones</h3>
+        <div class="col-sm-12 col-md-8 col-lg-9 rounded my-calcs">
+            <h3 class="text-center text-light">Opciones</h3>
             <!--BUTTON TOOLBAR-->            
             <div class="btn-toolbar d-flex flex-column align-items-center" role="toolbar">
                 <!--CALCULATE-->
-                <div class="btn-group me-2 d-flex flex-wrap" role="group">
-                    <button type="button" class="btn btn-primary components-btn" id="components">Componentes</button>
-                    <button type="button" class="btn btn-primary module-btn" id="module">M&oacute;dulo</button>
-                    <button type="button" class="btn btn-primary select-btn" id="unit">Unitario</button>
-                    <button type="button" class="btn btn-primary select-btn" id="escalar">Escalar</button>
+                <div class="btn-group btn-g1 me-2 d-flex flex-wrap" role="group">
+                    <button type="button" class="btn components-btn" id="components">Componentes</button>
+                    <button type="button" class="btn module-btn" id="module">M&oacute;dulo</button>
+                    <button type="button" class="btn select-btn" id="unit">Unitario</button>
+                    <button type="button" class="btn select-btn" id="escalar">Escalar</button>
                 </div>
                 <!--OPERATIONS-->
-                <div class="btn-group me-2 d-flex flex-wrap" role="group">
-                    <button type="button" class="btn btn-secondary select-btn" id="suma-resta">Suma/Resta</button>
-                    <button type="button" class="btn btn-secondary select-btn" id="p-escalar">Producto escalar</button>
-                    <button type="button" class="btn btn-secondary select-btn" id="p-vectorial">Producto vectorial</button>
+                <div class="btn-group btn-g2 me-2 d-flex flex-wrap" role="group">
+                    <button type="button" class="btn select-btn" id="suma-resta">Suma/Resta</button>
+                    <button type="button" class="btn select-btn" id="p-escalar">Producto escalar</button>
+                    <button type="button" class="btn select-btn" id="p-vectorial">Producto vectorial</button>
                 </div>                
             </div>
             <!--BOX OPERATIONS SCREEN-->
-            <div class="screen-operations box">
+            <div class="screen-operations box box-cont">
                 <p class="replaceable">Elija una operaci&oacute;n</p>
                 <!--CALCULATE DIVS-->
-                <div class="d-flex align-items-center input-div d-none">
+                <div class="d-flex align-items-center input-div d-none box">
                     <!--COMPONENTS DIV-->
                     <div class="mx-xl-5 components-div d-none">
                         <!--X COMPONENT-->
@@ -125,7 +124,18 @@
     </section>
     <!--FOOTER-->
     <footer>
-
+        <div class="container-fluid mt-5">
+            <div class="row text-center">
+                <h5>Integrantes:</h5>
+                <ul>
+                    <li>La Torre Romero, Jose Luis</li>
+                    <li>Jara Mej&iacute;a, Kevin</li>
+                    <li>Justiniano Cabrera, Gerson Bruno</li>
+                    <li>Patricio Julca, Vilberto Alberto</li>
+                    <li>Villanueva Olascuaga, Yan Luis</li>
+                </ul>
+            </div>
+        </div>
     </footer>
 </body>
 <script src="./js/bootstrap.bundle.min.js"></script>
