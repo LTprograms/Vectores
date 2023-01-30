@@ -9,7 +9,7 @@ $(document).ready(function () {
     operationBtn(); //set click event to buttons   
     updateData(); //keyup update vector
     saveVector(); //save
-});
+}); 
 //---------------------------------------------------------------
 //CLICK EVENT BUTTONS FUNCTION-----------------------------------
 function operationBtn() {
